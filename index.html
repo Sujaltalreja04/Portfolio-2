@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujal Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #141414, #2a2a2a);
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        header {
+            background: rgba(0, 87, 146, 0.8);
+            color: #50b3a2;
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            animation: floatAnimation 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatAnimation {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        header h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out 0.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            padding: 30px;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #1E1E1E, #333);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out 0.5s forwards;
+        }
+
+        h1, h2 {
+            color: #50b3a2;
+            transition: color 0.3s ease;
+        }
+
+        h1:hover, h2:hover {
+            color: #ff7f50;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ff7f50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffa07a;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-list-item {
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-list-item:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .contact-button {
+            padding: 10px 20px;
+            background-color: #ff7f50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #e64a19;
+        }
+
+        @media (max-width: 768px) {
+            header img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://raw.githubusercontent.com/Sujaltalreja04/Edited-web/main/Screenshot%202023-11-29%20001357.png" alt="Your Image">
+            <h1>Welcome to Sujal Portfolio</h1>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <p>I am Sujal K Talreja, a passionate and dedicated professional with expertise in web development and design. With a strong foundation in HTML, CSS, and JavaScript, I strive to create user-friendly and aesthetically pleasing websites.</p>
+        </section>
+        <section>
+            <h2>My Skills</h2>
+            <p>I specialize in front-end development with proficiency in HTML, CSS, JavaScript, and ReactJS. I also have experience in back-end technologies like NodeJS and ExpressJS. I am always eager to learn new technologies and improve my skills.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li class="project-list-item">Project A: <a href="https://sujaltalreja04.github.io/New-to-do-list-application-updated-css/">To-do List Application</a></li>
+                <li class="project-list-item">Project B: <a href="https://sujaltalreja04.github.io/Currency-Convertor/">Currency Converter</a></li>
+                <li class="project-list-item">Project C: <a href="https://sujaltalreja04.github.io/Guess-Random-Number/">Guess Random Number</a></li>
+                <li class="project-list-item">Project D: <a href="https://sujaltalreja04.github.io/Weather-website/">Advance Weather Website</a></li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="mailto:sujaltalreja04@gmail.com" class="contact-button">Email</a>
+                <a href="https://www.linkedin.com/in/sujal-kishore-kumare-talreja-65975b216" class="contact-button" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Sujaltalreja04" class="contact-button" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
